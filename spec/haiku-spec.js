@@ -1,27 +1,34 @@
 import { Haiku } from './../js/haiku.js';
 
-describe('Haiku', function(){
-  it('should test whether the input contains letters only', function() {
-    let haiku = new Haiku("he has the dog", "mango banana", "today is rainy")
-    expect(haiku.line1).toContain("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");
-
-    expect(haiku.line2).toContain("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");
-
-    expect(haiku.line3).toContain("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");
-
-  });
-});
-
 describe('Haiku', function() {
-  it('it will replace vowels with spaces', (function(){
-    let haiku = new Haiku('he has the dog', 'the sky is blue', 'today is rainy');
-    haiku.vowelReplace();
-    expect(haiku.line1).toEqual("h  h s th  d g");
-    console.log("$$$$$$$$$$$$$$" + haiku.line1);
-    expect(haiku.line2).toEqual("th  sk   s bl  ");
-    expect(haiku.line3).toEqual("t d y  s r  ny");
-  }));
-});
+  it('should count the number of syllables in an input', function(){
+    let haiku = new Haiku("this is a sentence")
+    expect(haiku.vowelReplace()).toEqual(5);
+  })
+})
+
+// describe('Haiku', function(){
+//   it('should test whether the input contains letters only', function() {
+//     let haiku = new Haiku("he has the dog", "mango banana", "today is rainy")
+//     expect(haiku.line1).toContain("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");
+//
+//     expect(haiku.line2).toContain("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");
+//
+//     expect(haiku.line3).toContain("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");
+//
+//   });
+// });
+//
+// describe('Haiku', function() {
+//   it('it will replace vowels with spaces', (function(){
+//     let haiku = new Haiku('long dark range', 'the sky is blue', 'today is rainy');
+//     haiku.vowelReplace();
+//     expect(haiku.line1).toEqual("h  h s th  d g");
+//     console.log("$$$$$$$$$$$$$$" + haiku.line1);
+//     // expect(haiku.line2).toEqual("th  sk   s bl  ");
+//     // expect(haiku.line3).toEqual("t d y  s r  ny");
+//   }));
+// });
 
 
 // describe('Haiku', function(){
